@@ -11,4 +11,4 @@
 
     - name: Print the oslevel
       debug:
-        msg: "{{ ansible hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
+        msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
