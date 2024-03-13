@@ -1,6 +1,6 @@
 ---
 - name: Check Connection
-  hosts: pnb-hosts
+  hosts: aix-ssokt
   tasks:
     - name: Ping IP
       ansible.builtin.ping:
@@ -37,7 +37,7 @@
        download_dir: "/export/nim/lpp_source"
        lpp_source_name: "{{ nim_lpp_source }}"
        oslevel: "{{ oslevel }}"
-       
+
 - name: AIX oslevel checking playbook
   hosts: aix.server.example
   tasks:
