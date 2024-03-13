@@ -13,9 +13,9 @@
       debug:
         msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
 
-    - name: "Reboot a machine"
-      reboot:
-        pre_reboot_delay: 20
-        post_reboot_delay: 20
-        connect_timeout: 10
-        reboot_timeout: 300
+    # - name: "Reboot a machine"
+    #   reboot:
+    #     pre_reboot_delay: 20
+    #     post_reboot_delay: 20
+    #     connect_timeout: 10
+    #     reboot_timeout: 300
