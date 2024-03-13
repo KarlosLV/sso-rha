@@ -1,0 +1,8 @@
+---
+- name: Check AIX OS Level
+  hosts: aix-ssokt
+  tasks:
+    - name: Ping connection to AIX Server
+      ansible.builtin.ping:
+
+    
