@@ -6,7 +6,7 @@
       ansible.builtin.ping:
 
 - name: Prep AIX for Ansible
-  hosts: aix.server.example
+  hosts: aix-ssokt
   vars:
     pkgtype: yum
   collections:
@@ -14,7 +14,7 @@
   roles: power_aix_bootstrap
 
 - name: AIX oslevel checking playbook
-  hosts: aix.server.example
+  hosts: aix-ssokt
   tasks:
    - name: Gather LPP Facts
      shell: "oslevel -s"
@@ -24,7 +24,7 @@
        msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
 
 - name: AIX Patching Playbook
-  hosts: aix.server.example
+  hosts: aix-ssokt
   vars:
     oslevel: 7200-05-05
     nim_lpp_source: 7200-05-06-2320-lpp_source
@@ -39,7 +39,7 @@
        oslevel: "{{ oslevel }}"
 
 - name: AIX oslevel checking playbook
-  hosts: aix.server.example
+  hosts: aix-ssokt
   tasks:
    - name: Gather LPP Facts
      shell: "oslevel -s"
